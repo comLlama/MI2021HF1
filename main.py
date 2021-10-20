@@ -4,7 +4,7 @@ e = int(input())
 #print("p={0}, n={1}, e={2}".format(p,n,e))
 
 input()
-routes = []
+routes = [] # from - to nodes
 for i in range(p):
     line = input().split("\t")
     line[0] = int(line[0])
@@ -12,7 +12,7 @@ for i in range(p):
     routes.append(line)
 
 input()
-crossroads = []
+crossroads = [] # nodes
 for i in range(n):
     line = input().split("\t")
     line[0] = int(line[0])
@@ -20,7 +20,7 @@ for i in range(n):
     crossroads.append(line)
 
 input()
-roads = []
+roads = [] # edges
 for i in range(e):
     line = input().split("\t")
     line[0] = int(line[0])
