@@ -15,11 +15,12 @@ class Node:
 
 class TracedNodes:
     def __init__(self, start, end):
-        self.traced = [[start, 0+start.getManhattanDistance(end)]]
+        self.traced = [[start, 0, start.getManhattanDistance(end)]]
+        #   node, distance from start, heuristic distance to end
         self.end = end
 
     def reorder(self):
-        self.traced = self.traced.sort(key=lambda x: x[1])
+        self.traced = self.traced.sort(key=lambda x: x[1]+x[2])
 
 
     
